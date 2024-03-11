@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UserAccount List</title>
+</head>
+<body>
+    <h1>UserAccount List</h1>
+    <p>Retrieved: {{ user_accounts.count }}</p>
+    <ul>
+        {% for account in user_accounts %}
+            <li>{{ account }}</li>
+            <li>{{ account.userprofile.bio }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
